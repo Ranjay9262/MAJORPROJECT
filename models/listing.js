@@ -8,16 +8,14 @@ const listingSchema = new Schema({
     },
     description: String,
     image: {
-        filename: {
             type: String,
-            default: "listingimage",
+            default: "listing.image",
         },
         url: {
             type: String,
-            default: "...",
+            default: "https://pixabay.com/photos/beach-beach-resort-antalya-nature-7252178/",
         },
-    },
-    
+
     price: Number,
     location: String,
     country: String,
@@ -58,11 +56,11 @@ const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;*/
 
 
-/*image: {
-        type: String,
-        default: "...",
-        set: (v) =>
-             v === ""
-         ? "https://pixabay.com/images/download/x-10490986_1920.jpg" 
-         :v,
-    },*/
+/* image: {
+      type: String,
+      default: "https://pixabay.com/photos/beach-beach-resort-antalya-nature-7252178/",
+      set: (v) =>
+           v === ""
+       ? "https://pixabay.com/images/download/x-10490986_1920.jpg" 
+       :v,
+  }, */
